@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Button example</title>
+<style>
+        /* CSS styles for the buttons */
+        .mybutton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #087bff; /* Initial Background Color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .mybutton:hover {
+            background-color: #0056b3; /* Color on Hover */
+        }
+</style>
+</head>
+<body>
+    <!--HTML Button Element-->
+    <button type="button" class="myButton" id="myBtn">Click Me!</button>
+
+    <!--JavaScript code-->
+    <script>
+        // Function to be executed when the button is clicked
+        function onButtonClick() {
+            const button = document.getElementById('myBtn')
+            button.textContent = "Clicked!";
+            button.style.backgroundColor = "green";
+            button.disabled = true; // Disable the button after one click alert('Button has been clicked!');
+        }
+
+        // Add an event listener to the button
+        const myButtonElement = document.getElementById('myBtn');
+        myButtonElement.addEventListener('click', ButtonClick);
+    </script>
+</body>
