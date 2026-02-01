@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Methods in HTML</title>
+</head>
+<body>
+
+<h1 id = "main-title">Original Title</h1>
+<p id = "content-area">Initial paragraph content.</p>
+
+<button onclick="changeContent()">Click to Change Content</button>
+<button onclick="addNewElement()">Click to Add New Element</button>
+
+<script>
+// Method 1: Get an Element by its ID and change its inner HTML
+function changeContent() {
+const titleElement = document.getElementById("main-title");
+titleElement.innerHTML = "Title has changed!";
+
+const contentElement = document.getElementById("content-area");
+contentElement.innerHTML = "The paragraph content has been updated by a Javascript method.";
+}
+
+// Method 2: Create a new Element and append it to the body
+function addNewElement() {
+const newParagraph = document.createElement("p"); // Create a new <p> element
+const textNode = document.createTextNode("This is a new paragraph added dynamically!"); // Create text content
+
+newParagraph.appendChild(textNode); // Add text to the paragraph
+document.body.appendChild(newParagraph); // Add the new paragraph to the end of the body
+}
+</script>
+
+</body>
+</html>
