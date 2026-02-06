@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Javascript Object Example</title>
+</head>
+<body>
+
+<h1>Exploring a Javascript Object</h1>
+
+<p>Object Properties will be diplayed here:</p>
+<p id="object-output"></p>
+
+<script>
+    // 1. Create a Javascript object using object literal syntax.
+    const person = {
+        name: "John Doe",
+        age: 30,
+        city: "New York",
+        // A method (function) within the object
+        getSummary: function() {
+            return this.name + " is " + this.age + " years old and lives in " + this.city + ".";
+        }
+    };
+
+    // 2. Access the object and its method.
+    const summaryText = person.getSummary();
+
+    // 3. Display the result in a HTML element.
+    document.getElementById("object-output").innerHTML = summaryText;   
+
+    // 4. You can also log the object to the browser console for debugging.
+    console.log(person);
+    console.log("Name" , person.name);
+</script>
+
+</body>
+</html>
