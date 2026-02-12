@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Methods in HTML</title>
+</head>
+<body>
+
+<h1 id="myHeading">Original Heading</h1>
+<p class="myParagraph">This is the original paragraph content.</p>
+<button onclick="changeContent()">Click Me!</button>
+
+<script>
+// Function called when the button is clicked
+function changeContent() {
+    // 1. Select the H1 Element by its ID
+    const headingElement = document.getElementById("myHeading");
+
+    // 2. Change the innerHTML content
+    headingElement.innerHTML = "New Heading Text!";
+
+    // 3. Select the paragraph element by its class name
+    const paragraphElement = document.querySelector(".myParagraph");
+
+    // 4. Change the text content and style
+    paragraphElement.textContent = "The paragraph content has been updated by Javascript.";
+paragraphElement.style.color = "blue";
+paragraphElement.style.fontWeight = "bold";
+}
+</script>
+</body>
+</html>
