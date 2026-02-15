@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Conditions</title>
+    <style>
+        body {
+    
+            font-family: sans-serif;
+    
+            display: flex;
+    
+            justify-content: center;
+    
+            align-items: center;
+    
+            height: 100vh;
+    
+            margin: 0;
+    
+            background-color: #f0f0f0;
+    
+        }
+    
+        .weather-container {
+    
+            padding: 20px;
+    
+            border-radius: 10px;
+    
+            text-align: center;
+    
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        }
+    
+        .sunny {
+            background-color: #fffacd;
+            color: #daa520;
+        }
+    
+        .rainy {
+            background-color: #b0c4de;
+            color: #4682b4;
+        }
+    
+        .snowing {
+            background-color: #e0ffff;
+            color: #48d1cc;
+        }
+    
+        .overcast {
+            background-color: #d3d3d3;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container" id="weatherBox">
+        <h1 id="weatherMessage"></h1>
+        <p id="weatherAdvice"></p>
+    </div>
+
+    <script>
+        // Define the current weather condition (You can change this value to test different conditions)
+        const currentWeather = "rainy";
+
+        // Get references to HTML elements
+        const weatherBox = document.getElementById("weatherBox");
+        const weatherMessage = document.getElementById("weatherMessage");
+        const weatherAdvice = document.getElementById("weatherAdvice");
+
+        if (currentWeather === "sunny") {
+            weatherMessage.textContent = "It is sunny outside today";
+            weatherAdvice.textContent = "Wear shorts! Go to the beach, or the park, and get an ice cream.";
+            weatherBox.classList.add("sunny");
+        } else if (currentWeather === "rainy") {
+                weatherMessage.textContent = "Rain is falling outside";
+                weatherAdvice.textContent = "Take a rain coat and an umbrella, and don't stay out for too long.";
+                weatherBox.classList.add("rainy");
+        } else if (currentWeather === "snowing") {
+               weatherMessage.textContent = "The snow is coming down!";
+               weatherAdvice.textContent = "It is freezing! Wear a warm jacket and a hat";
+               weatherBox.classList.add("snowing");
+        } else if (currentWeather === "overcast") {
+
+                weatherMessage.textContent = "It is overcast today.";
+
+                weatherAdvice.textContent = "It isn't raining or snowing, but it might be a bit cool.";
+
+                weatherBox.classList.add("overcast");
+
+            } else {
+
+                weatherMessage.textContent = "Weather condition unknown.";
+
+                weatherAdvice.textContent = "Check the local forecast for more information.";
+
+            }
+
+    </script>
+</body>
+</html>
