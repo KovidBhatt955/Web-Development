@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+    .dice {
+  width: 100px;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+/* Shaking Animation Class */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+</head>
+<body>
+    <div class="dice-container"></div>
+    <div id="dice" class="dice">1</div>
+    </div>
+    <button id="rollBtn">Roll the Dice!</button>
+    <script>
+        
+            const dice = document.getElementById('dice');
+
+            const rollBtn = document.getElementById('rollBtn');
+
+            rollBtn.addEventListener('click', () => {
+
+                // Add shake animation
+
+                dice.classList.add('shake');
+
+
+                // Generate random number after short delay for effect
+
+                setTimeout(() => {
+
+                    const rollValue = Math.floor(Math.random() * 6) + 1;
+
+                    dice.textContent = rollValue;
+
+                    dice.classList.remove('shake');
+
+                }, 500);
+
+            });
+    </script>
+</body>
+</html>
