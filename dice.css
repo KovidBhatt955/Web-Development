@@ -1,0 +1,37 @@
+body {
+    disply: flex;
+    justify-content: center;
+    align-items: cener;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#number-display {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(0.98);
+}
