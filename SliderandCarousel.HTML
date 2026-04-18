@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section>
+            <img class="mySlides" src="apple-1834639_640.jpg" style="height:500px; width:1340px;">
+            <img class="mySlides" src="single-pear-fruit-close-up-vector-46400451.jpg" style="height:500px; width:1340px;">
+            <img class="mySlides" src="single-ripe-strawberry-fruit-25754001.webp" style="height:500px; width:1340px;">
+        </section>
+        <style>
+            .carousel-container {
+width: 600px; /* Adjust size */
+margin: auto;
+overflow: hidden;
+position: relative;
+}
+
+.carousel-slide {
+display: flex;
+transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide img {
+width: 100%;
+height: auto;
+}
+
+#prevBtn, #nextBtn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+}
+        </style>
+        
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+
+    </body>
+</html>
